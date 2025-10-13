@@ -1,0 +1,50 @@
+/* Main layout */
+.map-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  height: 90vh; /* full height minus header/footer */
+  padding: 16px;
+}
+
+/* Map box */
+.map-wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.parcel-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0284c7;
+}

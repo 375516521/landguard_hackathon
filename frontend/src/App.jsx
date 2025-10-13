@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home.jsx';
+//import MapPage from './MapPage.jsx';
+import Register from './Register.jsx';
+import Login from './Login.jsx';
+import Projects from './Projects.jsx';
+import ParcelCreate from './ParcelCreate.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'leaflet/dist/leaflet.css';
+import './styles.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <div className="app">
+        <header className="topbar">
+          <div className="brand">LandGuard <span className="accent">AI</span></div>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/map">Map</Link>
+            <Link to="/projects">Marketplace</Link>
+            <Link to="/parcel/create">Add Parcel</Link>
+            <Link to="/login">Login</Link>
+          </nav>
+        </header>
 
-export default App
+        <main className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/map" element={<MapPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/parcel/create" element={<ParcelCreate />} />
+          </Routes>
+        </main>
+
+        <footer className="footer">© LandGuard AI - Hackathon MVP</footer>
+        <ToastContainer position="top-right" />
+      </div>
+    </BrowserRouter>
+  );
+}

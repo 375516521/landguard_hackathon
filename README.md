@@ -181,4 +181,7 @@ LandGuard AI is designed to foster collaboration between:
 * 🌱 **NGOs & Governments** — analyze risk at scale and run conservation programs
 * 🧠 **Developers / Data Scientists** — extend the platform with plugins or better AI models
 * 💼 **Businesses & Investors** — connect with sustainable land projects in the marketplace
+* 
 
+
+Author: **Charles Wambua**

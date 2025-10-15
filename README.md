@@ -26,7 +26,7 @@ LandGuard AI is an intelligent web application that leverages geospatial data an
 
 LandGuard AI provides a platform where individuals, NGOs, or governments can **map parcels of land**, run **AI-based environmental risk analyses**, and visualize results on an interactive map. It allows users to register/login, add parcels, and view detailed analytics.
 
-The frontend is built with **React** (or plain JS alternative) and uses **Leaflet.js** for mapping, while the backend is powered by **Node.js / Express** and **MongoDB** for data persistence.
+The frontend is built with **React** and uses **Leaflet.js** for mapping, while the backend is powered by **Node.js / Express** and **MongoDB** for data persistence.
 
 ---
 
